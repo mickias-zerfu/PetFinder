@@ -1,0 +1,114 @@
+
+  * {
+    border-right: none;
+    background: #ffffff;
+    color: #254799;
+    clear: both;
+  }
+  .enterprise-detail-page{
+    width: 100%;
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+
+  }
+ .enterprise-head{
+   text-align: left;
+ }
+  .enterprise-body {
+    display: flex;
+    flex-direction: column;
+
+  }
+  .content-centerd {
+    display: flex;
+    justify-content: center;
+  }
+  .title-container {
+    padding-left: 2%;
+    text-align: left;
+    width: 100%;
+  }
+  .title {
+    color: #254799;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 55px;
+    font-weight: bold;
+    letter-spacing: -1px;
+    line-height: 1;
+    text-align: left;
+  }
+  .subtitle {
+    color: #254799;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: left;
+  }
+  .enterprize-information-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .enterpriseName{
+    width: 50%;
+    margin-left: 10px;
+  }
+
+  .action-button {
+    margin-bottom: 5px;
+  }
+  .mat-card {
+    width: 90%;
+    float: left;
+    margin-left: 50px;
+    margin-top: 10px;
+    background-color: white;
+    color: rgb(8, 10, 32);
+  }
+  mat-icon{
+      margin-right: 10px;
+  }
+
+  .enterprise-container {
+    background-color: white;
+    color: rgb(8, 10, 32);
+  }
+
+  .item-header {
+  border: 1px solid rgb(8, 10, 32);
+  border-radius: 3%;
+  }
+
+  .enterprise-detail {
+    padding: 2%;
+  }
+
+  .form-component {
+    text-align: left;
+      display: flex;
+      justify-content: flex-start;
+  }
+
+  a {
+    text-decoration: none;
+    color: rgb(8, 10, 32);
+  }
+
+  a:hover,
+  a:active {
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  .addresses {
+    padding-left: 5px;
+  }
+
+  .action {
+    width: 100%;
+  }
+
+  .action .button-40 {
+    width: 100%;
+  }

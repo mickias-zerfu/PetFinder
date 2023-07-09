@@ -1,0 +1,59 @@
+<div *ngIf="issinglePetReturned">
+  <div class="pet-details">
+    <div class="pet-detail">
+      <div *ngIf="pet.photos" class="imagecontainer">
+        <div *ngFor="let photo of pet.photos" class="pet-list-card item" style="display: inline-block;">
+          <div class="photo-card">
+            <img alt="Image of Pet" class="previewimage" src="{{photo.small}}" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="addresses">
+      <div class="table-container">
+        <table class="table table-striped  align-middle text-nowrap">
+          <thead>
+            <tr>
+              <th class="text-dark font-medium fs-4"> </th>
+              <th class="text-dark font-medium fs-4"> </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="fs-4">Type</td>
+              <td>
+                <h6><strong>{{pet.type}}</strong> </h6>
+              </td>
+            </tr>
+            <tr>
+              <td class="fs-4">Gender</td>
+              <td>
+                <h6><strong>{{pet.gender}}</strong> </h6>
+              </td>
+            </tr>
+            <tr>
+              <td class="fs-4">Size</td>
+              <td>
+                <h6><strong>{{pet.size}}</strong> </h6>
+              </td>
+            </tr>
+            <tr>
+              <td class="fs-4">Age</td>
+              <td>
+                <h6><strong>{{pet.age}}</strong> </h6>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div class="action">
+    <button mat-button class="button-40" style="background-color:#26499E; width: 200px;;" (click)="enableAdobt()"> ADOPT
+    </button>
+  </div>
+</div>
+<div *ngIf="isAdoptEnabled">
+  <app-email-phone></app-email-phone>
+</div>
+<div *ngIf="!issinglePetReturned"> L o a d i n g . . . </div>

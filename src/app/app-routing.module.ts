@@ -1,7 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { PetDeatilsComponent } from './pet-deatils/pet-deatils.component';
+import { HomeComponent } from './home/home.component';
 
-const routes: Routes = [];
+const routes: Routes = [
+  { path: "", redirectTo: "/", pathMatch: "full" },
+  { path: "",  component: HomeComponent   },
+  { path: "detail/:petId", component: PetDeatilsComponent },
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

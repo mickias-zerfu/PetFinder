@@ -1,0 +1,20 @@
+<div *ngFor="let pet of petListObject" class="pet-list-card item" style="display: inline-block;">
+  <div class="example-card">
+    <div class="item-header">
+      <h3>{{pet.type}}</h3>
+    </div>
+    <div class="pet-detail">
+      <div class="imagecontainer">
+        <img *ngIf="pet.primary_photo_cropped!=null" alt="Image of Pet" class="previewimage"
+          src="{{pet.primary_photo_cropped.full}}" />
+        <img *ngIf="!pet.primary_photo_cropped" alt="Image of Pet" class="previewimage" mat-card-image
+          src="../../../assets/noimagefound.jpg" />
+      </div>
+    </div>
+    <div class="action">
+      <button mat-button class="button-40" style="background-color:#26499E" routerLinkActive="nav-link active"
+        [routerLink]="['detail/'+pet.id]"> Detail
+      </button>
+    </div>
+  </div>
+</div>

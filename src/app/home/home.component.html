@@ -1,0 +1,60 @@
+<main >
+  <section>
+    <div class="searchComponent">
+      <form #f="ngForm" (ngSubmit)="onSearchClicked()" fxLayout="column" fxLayoutAlign="center center">
+
+        <h2>Search</h2>
+        <div class="params">
+          <div appearance="fill" class="form-component">
+            <div class="label">Type</div>
+            <select name="make" [(ngModel)]="type">
+              <option [value]="'cat'">CAT</option>
+              <option [value]="'dog'">DOG</option>
+            </select>
+          </div>
+          <div appearance="fill" class="form-component">
+            <div class="label">Good With Children</div>
+            <select name="condition" [(ngModel)]="good_with_children">
+              <option [value]="true">Yes</option>
+              <option [value]="false">No</option>
+            </select>
+          </div>
+
+          <div appearance="fill" class="form-component">
+            <div class="label">Age</div>
+            <select name="type" [(ngModel)]="age">
+              <option [value]="'baby'"> BABY</option>
+              <option [value]="'young'">YOUNG</option>
+              <option [value]="'adult'">ADULT</option>
+              <option [value]="'senior'">SENIOR</option>
+            </select>
+          </div>
+
+          <div appearance="fill" class="form-component">
+            <div class="label">Size</div>
+            <select name="type" [(ngModel)]="size">
+              <option [value]="">All types</option>
+              <option [value]="'small'">small</option>
+              <option [value]="'medium'">Medium</option>
+              <option [value]="'large'">Large</option>
+              <option [value]="'xlarge'">XLarge</option>
+            </select>
+          </div>
+          <div appearance="fill" class="form-component">
+            <div class="label">Gender</div>
+            <select name="type" [(ngModel)]="gender">
+              <option [value]="'male'">Male</option>
+              <option [value]="'female'">Female</option>
+            </select>
+          </div>
+          <button [disabled]="!f.valid" id="searchButton" class="form-component">Search</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <app-pet-list [petListObject]="petListObject">
+  </app-pet-list>
+
+
+<div *ngIf="!isPetReturned"> L o a d i n g . . . </div>

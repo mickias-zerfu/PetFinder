@@ -3,14 +3,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
-};
+  production: false,
+  baseUrl:'https://api.petfinder.com/v2/',
+  petFinderApi:'RohcDZTXURrNxfcRGL1lrIgE8VZ5l5QuBmEsv3JjCELjJaTRuM',
+  petfinderSecret:'ZI0X4mkwxKMaR0lzRYPE3wxbwPTBQT68YqWcd3Ka'
 
-/*
- * For easier debugging in development mode, you can import the following file
- * to ignore zone related error stack frames such as `zone.run`, `zoneDelegate.invokeTask`.
- *
- * This import should be commented out in production mode because it will have a negative impact
- * on performance if an error is thrown.
- */
-// import 'zone.js/plugins/zone-error';  // Included with Angular CLI.
+};
